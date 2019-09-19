@@ -3,6 +3,7 @@ import java.util.List;
 public class Pedido {
 	Cliente cliente;
 	List<LinhaPedido> linhas;
+	Double valorBase;
 	
 
 	public Pedido(Cliente cliente, List<LinhaPedido> linhas) {
@@ -11,14 +12,15 @@ public class Pedido {
 		this.linhas = linhas;
 	}
 
-	public float obterValorBase() {
-		float valorBase = 0;
+	public Double obterValorBase() {
+		return valorBase;
+	}
+	
+	public Double calcularPreco() {
+		valorBase = 0D;
 		for(LinhaPedido linha : linhas) {
 			valorBase+=linha.calcularPreco();
 		}
-		return valorBase;
-	}
-	public float calcularPreco() {
-		return cliente.obterValorComDesconto(pedido);
+		return cliente.obterValorComDesconto(this);
 	}
 }

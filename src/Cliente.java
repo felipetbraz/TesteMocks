@@ -42,7 +42,7 @@ public class Cliente {
 		this.desconto = desconto;
 	}
 	
-	public Float obterValorComDesconto(Pedido pedido) {
+	public Double obterValorComDesconto(Pedido pedido) {
 		return pedido.obterValorBase() - (pedido.obterValorBase() * desconto);
 	}
 }
