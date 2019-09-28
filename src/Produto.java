@@ -2,9 +2,9 @@
 public class Produto {
 	private int idProduto;
 	private String nomeProduto;
-	private Float preco;
+	private Double preco;
 	
-	public Produto(int idProduto, String nomeProduto, Float preco) {
+	public Produto(int idProduto, String nomeProduto, Double preco) {
 		super();
 		this.idProduto = idProduto;
 		this.nomeProduto = nomeProduto;
@@ -27,15 +27,15 @@ public class Produto {
 		this.nomeProduto = nomeProduto;
 	}
 
-	public Float getPreco() {
+	public Double getPreco() {
 		return preco;
 	}
 
-	public void setPreco(Float preco) {
+	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
 	
-	public Float obterPreco(int quantidade) {
+	public Double obterPreco(int quantidade) {
 		return quantidade * preco;
 	}
 }

@@ -10,7 +10,7 @@ public class LinhaPedido {
 		this.quantidade = quantidade;
 	}
 	
-	public float calcularPreco() {
+	public Double calcularPreco() {
 		return produto.obterPreco(quantidade);
 	}
 }

@@ -2,10 +2,10 @@
 public class Cliente {
 	private int idCliente;
 	private String nome;
-	private Float desconto;
+	private Double desconto;
 	
 	
-	public Cliente(int idCliente, String nome, Float desconto) {
+	public Cliente(int idCliente, String nome, Double desconto) {
 		super();
 		this.idCliente = idCliente;
 		this.nome = nome;
@@ -33,12 +33,12 @@ public class Cliente {
 	}
 
 
-	public Float getDesconto() {
+	public Double getDesconto() {
 		return desconto;
 	}
 
 
-	public void setDesconto(Float desconto) {
+	public void setDesconto(Double desconto) {
 		this.desconto = desconto;
 	}
 	
