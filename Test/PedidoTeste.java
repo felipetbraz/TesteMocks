@@ -37,10 +37,10 @@ public class PedidoTeste {
 	public void testaPedido() {
 		linhas.add(linhaPedido);
 		linhas.add(linhaPedido2);
-		when(cliente.obterValorComDesconto(pedido)).thenReturn(150.1);
-		when(cliente.obterValorComDesconto(pedido)).thenReturn(50.5);
 		when(linhaPedido.calcularPreco()).thenReturn(110.3);
+		when(linhaPedido.calcularPreco()).thenReturn(60.2);
+		when(cliente.obterValorComDesconto(pedido)).thenReturn(150.1);
 		double valor = pedido.calcularPreco();
-		Assert.assertEquals(valor, 50.5, 0.0001);
+		Assert.assertEquals(valor, 150.1, 0.0001);
 	}
 }
