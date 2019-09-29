@@ -11,6 +11,6 @@ public class LinhaPedido {
 	}
 	
 	public Double calcularPreco() {
-		return produto.obterPreco(quantidade);
+		return produto.obterPreco() * quantidade;
 	}
 }

@@ -4,9 +4,9 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="D:/Felipe/Libs/byte-buddy-1.10.1.jar"/>
-	<classpathentry kind="lib" path="D:/Felipe/Libs/byte-buddy-agent-1.10.1.jar"/>
-	<classpathentry kind="lib" path="D:/Felipe/Libs/mockito-core-3.0.0.jar"/>
-	<classpathentry kind="lib" path="D:/Felipe/Libs/objenesis-3.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Raquelline/git/libs/byte-buddy-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Raquelline/git/libs/byte-buddy-agent-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Raquelline/git/libs/mockito-core-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Raquelline/git/libs/objenesis-3.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

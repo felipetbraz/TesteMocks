@@ -35,7 +35,7 @@ public class Produto {
 		this.preco = preco;
 	}
 	
-	public Double obterPreco(int quantidade) {
-		return quantidade * preco;
+	public Double obterPreco() {
+		return preco;
 	}
 }

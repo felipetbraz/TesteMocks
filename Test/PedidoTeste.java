@@ -12,6 +12,7 @@ import static org.mockito.Mockito.when;
 public class PedidoTeste {
 
 	private Pedido pedido;
+	List<LinhaPedido> linhas = new ArrayList<LinhaPedido>();
 	
 	@Mock
 	private Cliente cliente;
@@ -20,22 +21,26 @@ public class PedidoTeste {
 	private LinhaPedido linhaPedido;
 	
 	@Mock
+	private LinhaPedido linhaPedido2;
+		
+	@Mock
 	private Produto produto;
 	
 	
 	@Before
-	public void initPedido() {
-		List<LinhaPedido> linhas = new ArrayList<LinhaPedido>();
-		linhas.add(linhaPedido);
+	public void initPedido() {		
 		MockitoAnnotations.initMocks(this);
 		pedido = new Pedido(cliente, linhas);
 	}
 	
 	@Test
 	public void testaPedido() {
+		linhas.add(linhaPedido);
+		linhas.add(linhaPedido2);
 		when(cliente.obterValorComDesconto(pedido)).thenReturn(150.1);
-		when(linhaPedido.calcularPreco()).thenReturn(150.1);
+		when(cliente.obterValorComDesconto(pedido)).thenReturn(50.5);
+		when(linhaPedido.calcularPreco()).thenReturn(110.3);
 		double valor = pedido.calcularPreco();
-		Assert.assertEquals(valor, 0, 0.1);
+		Assert.assertEquals(valor, 50.5, 0.0001);
 	}
 }
